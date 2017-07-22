@@ -1,10 +1,11 @@
 <html>
 <body>
 
+   
   
   <div class="TVandBoxContainer">
     <h1>obscuri-tv</h1>
-   <div class="boxWrapper">
+   <div class="box-wrapper remove-on-small">
   </div>
   
   <div id="TVholder">
@@ -18,25 +19,27 @@
     <div id="TVbase" class="TVdesign"></div>
   </div>
   
-  <div class="boxWrapper">
-    <div class="controlBox TVdesign">
+  <div class="box-wrapper">
+    <div class="control-box TVdesign">
       <button class="controls" id="button">
      change channel
       </button> 
-      <div class="controls">
-        <div id="marquee-holder">
+      <div id="marquee-box" class="remove-on-phones">
+        <div class="marquee-holder">
+          
         <p>the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively</p>
+         
         </div> 
-        <div id="marquee-holder">
+        <div class="marquee-holder"> 
         <p id="marquee2">the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively</p>
         </div>
-        <div id="marquee-holder">
+        <div class="marquee-holder">
         <p>the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively</p>
         </div>
       </div> 
       
-         <form action="mailto:patrickdavies655@hotmail.com?subject=ObscuriTV clip suggestion&body=Maybe use something like Streamable.com to edit your clip... Thanks :-)" method="post" enctype="text/plain" >
-     <button class="controls" id="submit-new" type="submit" value="Submit new clip" onClick="submitForm(this.form1);">submit new clip</button>
+         <form action="mailto:patrickdavies655@hotmail.com?subject=ObscuriTV clip suggestion&body=Maybe use something like Streamable.com to crop your clip... Thanks :-)" method="post" enctype="text/plain" >
+     <button class="controls remove-on-phones" id="submit-new" type="submit" value="Submit new clip" onClick="submitForm(this.form1);">submit new clip</button>
    </form>       
       
     </div>  
@@ -45,6 +48,10 @@
   </div>
   
     
+   
+  
+   
+  
    
  </body>
 </html>
@@ -58,6 +65,8 @@
   font-family: sans-serif;
 }
 
+
+
 h1 {
   text-align: center;  
   font-family: sans-serif;
@@ -67,7 +76,8 @@ h1 {
   text-align: center;
   width: 99%;
   margin: 0 auto;
-  background-color: #CCC;
+  margin-bottom: 20px;
+/*   background-color: #CCC; */
   padding: 10% 3% 0 3%;
 /*   padding-top: 10%; */
   white-space:nowrap;
@@ -82,8 +92,9 @@ h1 {
 #TVholder {
   width: 40%;
   max-width: 350px;
-  margin: 0 7% 0 7%; 
-   background: #DDD; 
+  height: 100%;
+  margin: 1% 7% 0 7%; 
+/*   background: #DDD; */
   border-radius: 4px; 
   display: inline-block;
   text-align: center;
@@ -106,48 +117,44 @@ h1 {
 }
 
 #TVstalk{
-	width: 2.5%;
+  width: 2.5%;
   padding-top: 15%;
   margin: auto;
-	border-bottom-left-radius: 50% -50%; 
-	border-bottom-right-radius: 50% -50%; 
+  border-bottom-left-radius: 50% -50%; 
+  border-bottom-right-radius: 50% -50%; 
 }
 
 #TVbase{
-	width: 20%;
+  width: 20%;
   padding-top: 4%;
   margin: auto;
   border-radius: 90px 90px 0px 0px;   
 }
 
-.boxWrapper {
+.box-wrapper {
   display: inline-block;
   width: 19%;
-  height: 200px;
-  padding-top: 1em;
+  padding-top: 2em;
   max-width: 150px;
-/*   margin: 0 0 2em 0; */
-/*   background:#EEE; */
   vertical-align: top;
 }
 
-.controlBox {
+.control-box {
   border-radius: 4px; 
-  position: relative;
-  height: 200px;
+  width: 100%;
+  padding-top: 100%; 
   padding: 5px 5px 0 5px;
 }
 
 .controls {
-  height: 60px;
+  position: relative;
+  padding-top: 30%;
   width: 100%;
   border-radius: 4px;
-/*   background-color: #206E37; */
   margin-bottom: 5px;
-/*   line-height: 60px; */
   font-family: Lekton;
-  font-size: 11px;
   text-transform: uppercase;
+  background-color: white;
 }
 
 #button {
@@ -164,38 +171,39 @@ h1 {
   letter-spacing: 1px;
 }
 
-.button-text {
-  vertical-align: middle;
+#marquee-box {
+  width: 100%;
+  background-color: white;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  font-family: Lekton;
+  position: relative;
 }
 
-
-/* #TVscreen {  
-  background-color: black;
-} */
-
-#marquee-holder {	
- height: 33.333%;
+.marquee-holder { 
+ padding-top: 11%;
  width: 100%;
  overflow: hidden;
  position: relative;
  background: black;
  color: white;
-/*  border: 1px solid orange; */
 }
 
-#marquee-holder p {
+.marquee-holder p {
  text-transform: lowercase;
  position: absolute;
+ top: 0;
+ left: 0;
  width: auto;
  height: 30%;
  margin: 2% 0 0 0;
- white-space:nowrap;
+ white-space: nowrap;
  text-align: center;
  /* Starting position */
  -moz-transform:translateX(15%);
- -webkit-transform:translateX(15%);	
+ -webkit-transform:translateX(15%); 
  transform:translateX(15%);
- /* Apply animation to this element */	
+ /* Apply animation to this element */  
  -moz-animation: scroll-left-one 10s linear infinite;
  -webkit-animation: scroll-left-one 10s linear infinite;
  animation: scroll-left-one 10s linear infinite;
@@ -213,7 +221,7 @@ h1 {
  0%   { 
  -moz-transform: translateX(15%); /* Browser bug fix */
  -webkit-transform: translateX(15%); /* Browser bug fix */
- transform: translateX(15%); 		
+ transform: translateX(15%);    
  }
  100% { 
  -moz-transform: translateX(-100%); /* Browser bug fix */
@@ -222,12 +230,76 @@ h1 {
  }
 }
 
+
+
+html {
+  font-size: 18px;
+}
+.control-box {
+  font-size: .6rem;
+}
+.controls {
+  font-size: .6rem;
+}
+h1 {
+  font-size: 1.6em;
+}
+
+@media(max-width: 800px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media(max-width: 670px) {
+  html {
+    font-size: 18px;
+  }
+  .remove-on-small {
+    display: none;
+  } 
+  .box-wrapper {
+    display: block;
+    width: 40%;
+    margin: auto;
+  }
+  #TVholder {
+    width: 70%;
+  }
+}
+
+@media(max-width: 400px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media(max-width: 350px) {
+  html {
+    font-size: 14px;
+  }
+   .remove-on-phones {
+    display: none;
+  } 
+}
+
+
+.controls {
+  -webkit-transition-duration: 0.1s; /* Safari */
+  transition-duration: 0.1s;
+}
+
+.controls:hover {
+    background-color: #4CAF50; /* Green */
+    border: 2px solid #4CAF50; /* Green */
+    color: white;
+}
+
+
+
 </style>
 
 
-
 <script>
-
 var clipList = {
 1:"https://streamable.com/s/kgasi/nansgm?autoplay=1",
 2:"https://streamable.com/s/k1a1y/bzbys?autoplay=1",
@@ -258,7 +330,9 @@ thisform.submit();
 }
 
 
-//set text in marquee to very long
+// set text in marquee to very long
+
+
 var text1='the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively';
 
 function makeLongText(text) {
@@ -274,3 +348,5 @@ var longText1=makeLongText(text1);
 document.getElementById("marquee2").innerHTML = longText1;
 
 </script>
+
+
