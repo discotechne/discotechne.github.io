@@ -27,18 +27,18 @@
       <div id="marquee-box" class="remove-on-phones">
         <div class="marquee-holder">
           
-        <p>the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively</p>
+        <p id="marquee1"></p>
          
         </div> 
         <div class="marquee-holder"> 
-        <p id="marquee2">the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively</p>
+        <p id="marquee2"></p>
         </div>
         <div class="marquee-holder">
-        <p>the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively</p>
+        <p id="marquee3"></p>
         </div>
       </div> 
       
-         <form action="mailto:patrickdavies655@hotmail.com?subject=ObscuriTV clip suggestion&body=Maybe use something like Streamable.com to crop your clip... Thanks :-)" method="post" enctype="text/plain" >
+         <form action="mailto:patrickdavies655@hotmail.com?subject=obscuri-TV clip suggestion" method="post" enctype="text/plain" >
      <button class="controls remove-on-phones" id="submit-new" type="submit" value="Submit new clip" onClick="submitForm(this.form1);">submit new clip</button>
    </form>       
       
@@ -57,7 +57,9 @@
 </html>
 
 
+
 <style>
+
 * {
   margin: 0;
   padding: 0;
@@ -154,12 +156,20 @@ h1 {
   font-family: Lekton;
   text-transform: uppercase;
   background-color: white;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.controls:hover {
+  border-color: #FF8B2B;
+  cursor: pointer;
 }
 
 #button {
   background: url("https://s9.postimg.org/i128ivltr/l_orange_invert.jpg");
   background-size: cover;
   color: #FF4FF0;
+/*   color: #FF4FF0; */
   letter-spacing: 1px;
 }
 
@@ -180,18 +190,18 @@ h1 {
 }
 
 .marquee-holder { 
- padding-top: 11%;
+ padding-top: 15%;
  width: 100%;
  overflow: hidden;
  position: relative;
  background: black;
- color: white;
+ color: #D9D9D9;
 }
 
 .marquee-holder p {
  text-transform: lowercase;
  position: absolute;
- top: 0;
+ top: 7%;
  left: 0;
  width: auto;
  height: 30%;
@@ -199,28 +209,28 @@ h1 {
  white-space: nowrap;
  text-align: center;
  /* Starting position */
- -moz-transform:translateX(15%);
- -webkit-transform:translateX(15%); 
- transform:translateX(15%);
+ -moz-transform:translateX(0%);
+ -webkit-transform:translateX(0%);  
+ transform:translateX(0%);
  /* Apply animation to this element */  
- -moz-animation: scroll-left-one 10s linear infinite;
- -webkit-animation: scroll-left-one 10s linear infinite;
- animation: scroll-left-one 10s linear infinite;
+ -moz-animation: scroll-left-one 5000s linear infinite;
+ -webkit-animation: scroll-left-one 5000s linear infinite;
+ animation: scroll-left-one 5000s linear infinite;
 }
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left-one {
- 0%   { -moz-transform: translateX(15%); }
+ 0%   { -moz-transform: translateX(0%); }
  100% { -moz-transform: translateX(-100%); }
 }
 @-webkit-keyframes scroll-left {
- 0%   { -webkit-transform: translateX(15%); }
+ 0%   { -webkit-transform: translateX(0%); }
  100% { -webkit-transform: translateX(-100%); }
 }
 @keyframes scroll-left {
  0%   { 
- -moz-transform: translateX(15%); /* Browser bug fix */
- -webkit-transform: translateX(15%); /* Browser bug fix */
- transform: translateX(15%);    
+ -moz-transform: translateX(0%); /* Browser bug fix */
+ -webkit-transform: translateX(0%); /* Browser bug fix */
+ transform: translateX(0%);     
  }
  100% { 
  -moz-transform: translateX(-100%); /* Browser bug fix */
@@ -281,30 +291,56 @@ h1 {
   } 
 }
 
-
-.controls {
-  -webkit-transition-duration: 0.1s; /* Safari */
-  transition-duration: 0.1s;
-}
-
-.controls:hover {
-    background-color: #4CAF50; /* Green */
-    border: 2px solid #4CAF50; /* Green */
-    color: white;
-}
-
-
-
 </style>
 
 
+
 <script>
+
 var clipList = {
 1:"https://streamable.com/s/kgasi/nansgm?autoplay=1",
 2:"https://streamable.com/s/k1a1y/bzbys?autoplay=1",
 3:"https://streamable.com/s/uwvgh/ilyzjv?autoplay=1",
 4:"https://streamable.com/s/lo277/zrqzy?autoplay=1",
+5:"https://streamable.com/s/2ti2g/nifrhi?autoplay=1",
+6:"https://streamable.com/s/eszaa/fbueiw?autoplay=1",
+7:"https://streamable.com/s/y5ews/ahiout?autoplay=1",
+8:"https://streamable.com/s/gmy3s/idropf?autoplay=1",
+9:"https://streamable.com/s/wutc2/ldqdqq?autoplay=1",
+10:"https://streamable.com/s/6xxry/urxnzz?autoplay=1",
+11:"https://streamable.com/s/3ad11/tniije?autoplay=1",
+12:"https://streamable.com/s/az3l2/ztxcqt?autoplay=1",
+13:"https://streamable.com/s/1mkk2/krucez?autoplay=1",
+14:"https://streamable.com/s/8tg9s/zcuzvo?autoplay=1",
+15:"https://streamable.com/s/2iwcz/ezrbza?autoplay=1",
+16:"https://streamable.com/s/kjvzw/qxowmi?autoplay=1",
+17:"https://streamable.com/s/i3nae/maxcps?autoplay=1",
+18:"https://streamable.com/s/xofs7/oceqpj?autoplay=1",
+19:"https://streamable.com/s/cr54x/uglkkk?autoplay=1",
+20:"https://streamable.com/s/heegb/nlicdy?autoplay=1",
+21:"https://streamable.com/s/k5wmi/epdqpq?autoplay=1",
+22:"https://streamable.com/s/esa3f/syatqd?autoplay=1",
+23:"https://streamable.com/s/4hrpx/xxesaf?autoplay=1",  
+24:"https://streamable.com/s/t2rp4/kescf?autoplay=1",
+25:"https://streamable.com/s/b7gs2/ipzohy?autoplay=1",
+26:"https://streamable.com/s/o3xw6/nmxwt?autoplay=1",  
+27:"https://streamable.com/s/ynhpm/qlyuya?autoplay=1",
+28:"https://streamable.com/s/s09h6/svaqwh?autoplay=1",
+29:"https://streamable.com/s/61fvr/qdqcym?autoplay=1",
+30:"https://streamable.com/s/c3rkr/pnrvif?autoplay=1",
+31:"https://streamable.com/s/kl2lo/nwgrte?autoplay=1",
+32:"https://streamable.com/s/cdxss/papt?autoplay=1",
+33:"https://streamable.com/s/ay92n/fkisyd?autoplay=1",
+34:"https://streamable.com/s/fq9c4/obaglv?autoplay=1",
+35:"https://streamable.com/s/kyg7e/oeuoft?autoplay=1",
+36:"https://streamable.com/s/1i40s/doiaox?autoplay=1",
+37:"https://streamable.com/s/r78kv/kluauz?autoplay=1",
+38:"https://streamable.com/s/pv52l/vsgghx?autoplay=1",
+39:"https://streamable.com/s/8w2ef/mfftbk?autoplay=1",
+40:"https://streamable.com/s/5urg1/oronyj?autoplay=1"
 };
+
+
 
 var clipSelector = Math.floor(Math.random() * (Object.keys(clipList).length)) + 1;
 
@@ -332,20 +368,29 @@ thisform.submit();
 // set text in marquee to very long
 
 
-var text1='the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively';
+var textsArray=['the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, voiding expressively. ', 'the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively. ', 'it affects only the new, what is produced under the condition of default and by the intermediary of metamorphosis. But it causes neither the condition nor the agent to return: on the contrary, it repudiates these and expels them with all its centrifugal force. '];
 
-function makeLongText(text) {
-  var longText = "";
-  for (i=0; i<100; i++) {
-    longText+=text;
+function makeLongTexts(texts) {
+  var longTextsArray = [];
+  for (var b=0; b<3; b++) {
+    var longText = "";
+    var lengths = [150, 2000, 200]; 
+    for (var i=0; i<lengths[b]; i++) {
+      longText+=texts[b];
+  }  
+  longTextsArray.push(longText);  
   }
-  return longText;
+  return longTextsArray;
 }
 
-var longText1=makeLongText(text1);
+var longTexts = makeLongTexts(textsArray);
 
-document.getElementById("marquee2").innerHTML = longText1;
+
+var marquees = ["marquee1", "marquee2", "marquee3"];
+for (var j = 0; j < marquees.length; j++) {
+var marqueeSelector = marquees[j]; 
+document.getElementById(marqueeSelector).innerHTML = longTexts[j];}
+
 
 </script>
-
 
