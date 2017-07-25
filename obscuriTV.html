@@ -7,7 +7,7 @@
     <h1>obscuri-tv</h1>
     
     <!--invisible; mirrors opposite box-wrapper div in order to centre TV-->
-    <div class="box-wrapper remove-on-small">
+    <div class="box-wrapper" id="box-wrapper-left">
     </div>
     
     <!--contains whole TV, but not control box-->
@@ -23,7 +23,7 @@
 
     </div>
   
-    <div class="box-wrapper">
+    <div class="box-wrapper" id="box-wrapper-right">
       
       <div class="control-box TV-design">
         
@@ -260,10 +260,10 @@ h1 {
   html {
     font-size: 18px;
   }
-  .remove-on-small {
+  #box-wrapper-left {
     display: none;
-  } 
-  .box-wrapper {
+  }
+  #box-wrapper-right {
     display: block;
     width: 40%;
     margin: auto;
@@ -271,7 +271,6 @@ h1 {
   #TV-holder {
     width: 70%;
     margin-top: 0;
-    margin: 0% 7% 0 7%; 
   }
 }
 
