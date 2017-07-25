@@ -74,7 +74,8 @@
 }
 
 h1 {
-  text-align: center;  
+  text-align: center; 
+  font-family: sans-serif; 
 }
 
 .TV-and-box-container {
@@ -192,6 +193,7 @@ h1 {
  color: #D9D9D9;
 }
 
+/*--animates the scrolling text--*/
 .marquee-holder p {
  text-transform: lowercase;
  position: absolute;
@@ -233,8 +235,7 @@ h1 {
  }
 }
 
-
-
+/*font sizes and media queries*/
 html {
   font-size: 18px;
 }
@@ -253,6 +254,8 @@ h1 {
     font-size: 16px;
   }
 }
+
+/*removes the invisible left div and moves the control box underneath the TV, then resizes both*/
 @media(max-width: 670px) {
   html {
     font-size: 18px;
@@ -278,6 +281,7 @@ h1 {
   }
 }
 
+/*removes the scrolling texts and the submit-new-clip button, as these don't work on phones, yet...*/
 @media(max-width: 350px) {
   html {
     font-size: 14px;
@@ -293,80 +297,76 @@ h1 {
 
 <script>
 
+//list of clips
 var clipList = {
-1:"https://streamable.com/s/kgasi/nansgm?autoplay=1",
-2:"https://streamable.com/s/k1a1y/bzbys?autoplay=1",
-3:"https://streamable.com/s/uwvgh/ilyzjv?autoplay=1",
-4:"https://streamable.com/s/lo277/zrqzy?autoplay=1",
-5:"https://streamable.com/s/2ti2g/nifrhi?autoplay=1",
-6:"https://streamable.com/s/eszaa/fbueiw?autoplay=1",
-7:"https://streamable.com/s/y5ews/ahiout?autoplay=1",
-8:"https://streamable.com/s/gmy3s/idropf?autoplay=1",
-9:"https://streamable.com/s/wutc2/ldqdqq?autoplay=1",
-10:"https://streamable.com/s/6xxry/urxnzz?autoplay=1",
-11:"https://streamable.com/s/3ad11/tniije?autoplay=1",
-12:"https://streamable.com/s/az3l2/ztxcqt?autoplay=1",
-13:"https://streamable.com/s/1mkk2/krucez?autoplay=1",
-14:"https://streamable.com/s/6bqpm/mjngxh?autoplay=1",
-15:"https://streamable.com/s/2iwcz/ezrbza?autoplay=1",
-16:"https://streamable.com/s/kjvzw/qxowmi?autoplay=1",
-17:"https://streamable.com/s/i3nae/maxcps?autoplay=1",
-18:"https://streamable.com/s/xofs7/oceqpj?autoplay=1",
-19:"https://streamable.com/s/cr54x/uglkkk?autoplay=1",
-20:"https://streamable.com/s/heegb/nlicdy?autoplay=1",
-21:"https://streamable.com/s/k5wmi/epdqpq?autoplay=1",
-22:"https://streamable.com/s/esa3f/syatqd?autoplay=1",
-23:"https://streamable.com/s/4hrpx/xxesaf?autoplay=1",  
-24:"https://streamable.com/s/t2rp4/kescf?autoplay=1",
-25:"https://streamable.com/s/b7gs2/ipzohy?autoplay=1",
-26:"https://streamable.com/s/o3xw6/nmxwt?autoplay=1",  
-27:"https://streamable.com/s/ynhpm/qlyuya?autoplay=1",
-28:"https://streamable.com/s/s09h6/svaqwh?autoplay=1",
-29:"https://streamable.com/s/61fvr/qdqcym?autoplay=1",
-30:"https://streamable.com/s/c3rkr/pnrvif?autoplay=1",
-31:"https://streamable.com/s/kl2lo/nwgrte?autoplay=1",
-32:"https://streamable.com/s/cdxss/papt?autoplay=1",
-33:"https://streamable.com/s/ay92n/fkisyd?autoplay=1",
-34:"https://streamable.com/s/fq9c4/obaglv?autoplay=1",
-35:"https://streamable.com/s/kyg7e/oeuoft?autoplay=1",
-36:"https://streamable.com/s/1i40s/doiaox?autoplay=1",
-37:"https://streamable.com/s/r78kv/kluauz?autoplay=1",
-38:"https://streamable.com/s/pv52l/vsgghx?autoplay=1",
-39:"https://streamable.com/s/8w2ef/mfftbk?autoplay=1",
-40:"https://streamable.com/s/5urg1/oronyj?autoplay=1",
-41:"https://streamable.com/s/gesoq/zffhaq?autoplay=1",
-42:"https://streamable.com/s/419tw/mvziow?autoplay=1",
-43:"https://streamable.com/s/djcng/xfehdv?autoplay=1",
-44:"https://streamable.com/s/2ie0c/byvnri?autoplay=1"
+  1:"https://streamable.com/s/kgasi/nansgm?autoplay=1",
+  2:"https://streamable.com/s/k1a1y/bzbys?autoplay=1",
+  3:"https://streamable.com/s/uwvgh/ilyzjv?autoplay=1",
+  4:"https://streamable.com/s/lo277/zrqzy?autoplay=1",
+  5:"https://streamable.com/s/2ti2g/nifrhi?autoplay=1",
+  6:"https://streamable.com/s/eszaa/fbueiw?autoplay=1",
+  7:"https://streamable.com/s/y5ews/ahiout?autoplay=1",
+  8:"https://streamable.com/s/gmy3s/idropf?autoplay=1",
+  9:"https://streamable.com/s/wutc2/ldqdqq?autoplay=1",
+  10:"https://streamable.com/s/6xxry/urxnzz?autoplay=1",
+  11:"https://streamable.com/s/3ad11/tniije?autoplay=1",
+  12:"https://streamable.com/s/az3l2/ztxcqt?autoplay=1",
+  13:"https://streamable.com/s/1mkk2/krucez?autoplay=1",
+  14:"https://streamable.com/s/6bqpm/mjngxh?autoplay=1",
+  15:"https://streamable.com/s/2iwcz/ezrbza?autoplay=1",
+  16:"https://streamable.com/s/kjvzw/qxowmi?autoplay=1",
+  17:"https://streamable.com/s/i3nae/maxcps?autoplay=1",
+  18:"https://streamable.com/s/xofs7/oceqpj?autoplay=1",
+  19:"https://streamable.com/s/cr54x/uglkkk?autoplay=1",
+  20:"https://streamable.com/s/heegb/nlicdy?autoplay=1",
+  21:"https://streamable.com/s/k5wmi/epdqpq?autoplay=1",
+  22:"https://streamable.com/s/esa3f/syatqd?autoplay=1",
+  23:"https://streamable.com/s/4hrpx/xxesaf?autoplay=1",  
+  24:"https://streamable.com/s/t2rp4/kescf?autoplay=1",
+  25:"https://streamable.com/s/b7gs2/ipzohy?autoplay=1",
+  26:"https://streamable.com/s/o3xw6/nmxwt?autoplay=1",  
+  27:"https://streamable.com/s/ynhpm/qlyuya?autoplay=1",
+  28:"https://streamable.com/s/s09h6/svaqwh?autoplay=1",
+  29:"https://streamable.com/s/61fvr/qdqcym?autoplay=1",
+  30:"https://streamable.com/s/c3rkr/pnrvif?autoplay=1",
+  31:"https://streamable.com/s/kl2lo/nwgrte?autoplay=1",
+  32:"https://streamable.com/s/cdxss/papt?autoplay=1",
+  33:"https://streamable.com/s/ay92n/fkisyd?autoplay=1",
+  34:"https://streamable.com/s/fq9c4/obaglv?autoplay=1",
+  35:"https://streamable.com/s/kyg7e/oeuoft?autoplay=1",
+  36:"https://streamable.com/s/1i40s/doiaox?autoplay=1",
+  37:"https://streamable.com/s/r78kv/kluauz?autoplay=1",
+  38:"https://streamable.com/s/pv52l/vsgghx?autoplay=1",
+  39:"https://streamable.com/s/8w2ef/mfftbk?autoplay=1",
+  40:"https://streamable.com/s/5urg1/oronyj?autoplay=1",
+  41:"https://streamable.com/s/gesoq/zffhaq?autoplay=1",
+  42:"https://streamable.com/s/419tw/mvziow?autoplay=1",
+  43:"https://streamable.com/s/djcng/xfehdv?autoplay=1",
+  44:"https://streamable.com/s/2ie0c/byvnri?autoplay=1"
 };
 
-
-
+//selects random clip from clipList
 var clipSelector = Math.floor(Math.random() * (Object.keys(clipList).length)) + 1;
 
+//on page loading, sets the .src of the TV as the random clip selected above
 document.getElementById("TV-screen").src = clipList[clipSelector];
 
+//on button click, reloads .src of the TV with a new random clip from clipList
 document.getElementById('button').onclick = function(){
   var notSame = clipSelector;
+
+  //makes sure the selected clip is not the same as the current clip
   while (clipSelector === notSame) {
-  clipSelector = Math.floor(Math.random() * (Object.keys(clipList).length)) + 1;
+    clipSelector = Math.floor(Math.random() * (Object.keys(clipList).length)) + 1;
   }
+
   document.getElementById("TV-screen").src = clipList[clipSelector];
 }
 
- var form = document.querySelector("form");
-  form.addEventListener("submit", function(event) {
-document.getElementById("TV-screen").src = document.querySelector("#input1").value;
-    event.preventDefault();
-  });
 
-function submitForm(thisform) {
-thisform.submit();
-}
-
-
-// set text in marquee to very long
-
+//the below sets texts in marquee to repeat 150/2000/200 times, so that they're very long
+//this stops there being gaps on the screen after the single text has finishes
+//as the texts are set to different lengths (150/2000/200), this makes them run at different speeds
 
 var textsArray=['the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, voiding expressively. ', 'the endless generation and dissolution of expression, non-stop transformation of each expression into somethings else, operation consist in transcending what it themselves have produced, void expressively. ', 'it affects only the new, what is produced under the condition of default and by the intermediary of metamorphosis. But it causes neither the condition nor the agent to return: on the contrary, it repudiates these and expels them with all its centrifugal force. '];
 
@@ -385,12 +385,12 @@ function makeLongTexts(texts) {
 
 var longTexts = makeLongTexts(textsArray);
 
-
 var marquees = ["marquee1", "marquee2", "marquee3"];
-for (var j = 0; j < marquees.length; j++) {
-var marqueeSelector = marquees[j]; 
-document.getElementById(marqueeSelector).innerHTML = longTexts[j];}
 
+//cycles through both marquees and longTexts, setting the three marquees as 1st, 2nd, 3rd texts, respectively
+for (var j = 0; j < marquees.length; j++) {
+  var marqueeSelector = marquees[j]; 
+  document.getElementById(marqueeSelector).innerHTML = longTexts[j];
+}
 
 </script>
-
