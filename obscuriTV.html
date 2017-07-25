@@ -1,59 +1,64 @@
 <html>
 <body>
-
    
-  
-  <div class="TVandBoxContainer">
+  <!--contains everything--> 
+  <div class="TV-and-box-container">
+    
     <h1>obscuri-tv</h1>
-   <div class="box-wrapper remove-on-small">
-  </div>
-  
-  <div id="TVholder">
     
-    <div id="TV" class="TVdesign">
-        <iframe id="TVscreen" src="" frameborder="0">        
-        </iframe>
-    </div>  
+    <!--invisible; mirrors opposite box-wrapper div in order to centre TV-->
+    <div class="box-wrapper remove-on-small">
+    </div>
     
-    <div id="TVstalk" class="TVdesign"></div>
-    <div id="TVbase" class="TVdesign"></div>
-  </div>
+    <!--contains whole TV, but not control box-->
+    <div id="TV-holder">
+    
+      <div id="TV" class="TV-design">
+        <iframe id="TV-screen" src="" frameborder="0"></iframe>
+      </div>  
+    
+      <div id="TV-stalk" class="TV-design"></div>
+
+      <div id="TV-base" class="TV-design"></div>
+
+    </div>
   
-  <div class="box-wrapper">
-    <div class="control-box TVdesign">
-      <button class="controls" id="button">
-     change channel
-      </button> 
-      <div id="marquee-box" class="remove-on-phones">
-        <div class="marquee-holder">
-          
-        <p id="marquee1"></p>
-         
+    <div class="box-wrapper">
+      
+      <div class="control-box TV-design">
+        
+        <!--change-channel button-->
+        <button class="controls" id="button">change channel</button> 
+        
+        <!--middle box with scrolling texts-->
+        <div id="marquee-box" class="remove-on-phones">
+    
+          <div class="marquee-holder">
+            <p id="marquee1"></p>
+          </div> 
+        
+          <div class="marquee-holder"> 
+            <p id="marquee2"></p>
+          </div>
+        
+          <div class="marquee-holder">
+            <p id="marquee3"></p>
+          </div>
+        
         </div> 
-        <div class="marquee-holder"> 
-        <p id="marquee2"></p>
-        </div>
-        <div class="marquee-holder">
-        <p id="marquee3"></p>
-        </div>
-      </div> 
+        
+        <!--button to submit new clip; via email-->
+        <form action="mailto:patrickdavies655@hotmail.com?subject=obscuri-TV clip suggestion" method="post" enctype="text/plain">
+          <button class="controls remove-on-phones" id="submit-new" type="submit" value="Submit new clip" onClick="submitForm(this.form1);">submit new clip</button>
+        </form>       
       
-         <form action="mailto:patrickdavies655@hotmail.com?subject=obscuri-TV clip suggestion" method="post" enctype="text/plain" >
-     <button class="controls remove-on-phones" id="submit-new" type="submit" value="Submit new clip" onClick="submitForm(this.form1);">submit new clip</button>
-   </form>       
-      
-    </div>  
-  </div>
+      </div>  
+  
+    </div>
   
   </div>
-  
-    
-   
-  
-   
-  
-   
- </body>
+     
+</body>
 </html>
 
 
@@ -74,28 +79,25 @@ h1 {
   font-family: sans-serif;
 }
 
-.TVandBoxContainer {
+.TV-and-box-container {
   text-align: center;
   width: 99%;
   margin: 0 auto;
   margin-bottom: 20px;
-/*   background-color: #CCC; */
   padding: 10% 3% 0 3%;
-/*   padding-top: 10%; */
   white-space:nowrap;
 }
 
-.TVdesign {
+.TV-design {
   background: url("https://s17.postimg.org/we6zbm95b/kusama_fireflies-w500h333.jpg") no-repeat center; 
   }
 
 
 
-#TVholder {
+#TV-holder {
   width: 40%;
   max-width: 350px;
   margin: 1% 7% 0 7%; 
-/*   background: #DDD; */
   border-radius: 4px; 
   display: inline-block;
   text-align: center;
@@ -117,7 +119,7 @@ h1 {
   background-color: black;
 }
 
-#TVstalk{
+#TV-stalk{
   width: 2.5%;
   padding-top: 15%;
   margin: auto;
@@ -125,7 +127,7 @@ h1 {
   border-bottom-right-radius: 50% -50%; 
 }
 
-#TVbase{
+#TV-base{
   width: 20%;
   padding-top: 4%;
   margin: auto;
@@ -271,7 +273,7 @@ h1 {
     width: 40%;
     margin: auto;
   }
-  #TVholder {
+  #TV-holder {
     width: 70%;
   }
 }
@@ -348,19 +350,19 @@ var clipList = {
 
 var clipSelector = Math.floor(Math.random() * (Object.keys(clipList).length)) + 1;
 
-document.getElementById("TVscreen").src = clipList[clipSelector];
+document.getElementById("TV-screen").src = clipList[clipSelector];
 
 document.getElementById('button').onclick = function(){
   var notSame = clipSelector;
   while (clipSelector === notSame) {
   clipSelector = Math.floor(Math.random() * (Object.keys(clipList).length)) + 1;
   }
-  document.getElementById("TVscreen").src = clipList[clipSelector];
+  document.getElementById("TV-screen").src = clipList[clipSelector];
 }
 
  var form = document.querySelector("form");
   form.addEventListener("submit", function(event) {
-document.getElementById("TVscreen").src = document.querySelector("#input1").value;
+document.getElementById("TV-screen").src = document.querySelector("#input1").value;
     event.preventDefault();
   });
 
