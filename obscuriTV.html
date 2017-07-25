@@ -30,9 +30,10 @@
         <!--change-channel button-->
         <button class="controls" id="button">change channel</button> 
         
-        <!--middle box with scrolling texts-->
+        <!--middle box with three divs for scrolling texts-->
         <div id="marquee-box" class="remove-on-phones">
-    
+          
+          <!--three divs, one for each scrolling text--> 
           <div class="marquee-holder">
             <p id="marquee1"></p>
           </div> 
@@ -151,7 +152,6 @@ h1 {
   width: 100%;
   border-radius: 4px;
   margin-bottom: 5px;
-  /*font-family: Lekton;*/
   text-transform: uppercase;
   background-color: white;
 }
@@ -165,7 +165,6 @@ h1 {
   background: url("https://s9.postimg.org/i128ivltr/l_orange_invert.jpg");
   background-size: cover;
   color: #FF4FF0;
-/*   color: #FF4FF0; */
   letter-spacing: 1px;
 }
 
@@ -178,10 +177,8 @@ h1 {
 
 #marquee-box {
   width: 100%;
-  background-color: white;
   border-radius: 4px;
   margin-bottom: 5px;
-  /*font-family: Lekton;*/
   position: relative;
 }
 
@@ -269,6 +266,7 @@ h1 {
   }
   #TV-holder {
     width: 70%;
+    margin-top: 0;
   }
 }
 
