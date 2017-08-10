@@ -12,6 +12,8 @@ It was also tricky to make the design responsive. I have done this using padding
 
 Other things that don't currently work on mobile/tablet screens are the scrolling text in the control box, and the submit button; I decided to use media queries to remove these on smaller screens. I haven't yet been able to make the video autoplay within the frame of the TV on mobiles either. 
 
+Previous iterations of the webpage can be seen on my Codepen profile, along with a couple of more standard layouts: https://codepen.io/discotechne/. 
+
 I hope you enjoy surfing through the channels!
 
 Patrick
